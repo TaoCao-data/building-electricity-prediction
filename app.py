@@ -92,7 +92,7 @@ def add_numbers():
     new_model_error = model_score_rmse(np.expm1(true), np.expm1(pred))
     error_results = {'baseline': "{:.2f}".format(baseline_error),
                      'new_model': "{:.2f}".format(new_model_error)}
-    
+
     # bokeh plotting
     script, div = bokeh_plot(hist, true, pred, base)
 
@@ -106,4 +106,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
