@@ -1,5 +1,3 @@
-
-
 from flask import Flask, jsonify, render_template, request
 
 from bokeh.embed import components
@@ -60,6 +58,14 @@ def bokeh_plot(hist, true, pred, base):
     p.legend.location = "top_left"
     p.sizing_mode = "scale_both"
 
+    p.xaxis.axis_label_text_font_size = "12pt"
+    p.xaxis.axis_label_text_font = 'Helvetica'
+    p.xaxis.axis_label_text_font_style = 'normal'
+
+    p.yaxis.axis_label_text_font_size = "12pt"
+    p.yaxis.axis_label_text_font = 'Helvetica'
+    p.yaxis.axis_label_text_font_style = 'normal'
+
     # render template
     script, div = components(p)
 
@@ -106,4 +112,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
