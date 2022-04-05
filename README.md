@@ -1,10 +1,9 @@
-08/16/2020
+# Building Electricity Load Prediction Tool
 
-Building load prediction
+This repo is a demo version of an electricity load prediction tool. The interactive demo website can be accessed [here](https://energy-load-prediction.herokuapp.com/).
 
-This repo includes a code for building load prediction project. It is a demo version of the
-complete code. The complete code contains a data driven tool for general purpose building electricity load prediction. The tool is built with LSTM on Keras.
-
-If you are interested to learn more about the work, you can either check the demo via (Insert Heroku website) or send me a message via GitHub.
-
-Check my other projects at my website: https://taocao.me/
+The underlying model for the prediction tool is a time series model, built with LSTM on Tensorflow Keras. 
+Similarity learning based on [Gower Distance](https://github.com/wwwjk366/gower) enables the model to work with
+time series with or without historic records, a major challenge for benchmark models. The tool has exhibited 10-50%
+prediction error reductions over the benchmark models. Notebook examples on using the model are located under
+```notebook``` folder.
